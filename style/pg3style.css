@@ -61,23 +61,24 @@ header h1 {
 }
 .tab-bar {
   display: flex;
-  background-color: #333;
+  background-color: #23d88d49;
 }
 
 .tab-button {
   flex: 1;
   padding: 10px;
   color: white;
-  background-color: #333;
+  background-color: #23d88d49;
   border: none;
   cursor: pointer;
 }
 
 .tab-button:hover {
-  background-color: #555;
+  background-color: #23d88d49;
 }
 
 .tab-content {
   padding: 20px;
   border: 1px solid #ccc;
 }
+
