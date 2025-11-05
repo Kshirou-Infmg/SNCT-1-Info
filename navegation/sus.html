@@ -13,15 +13,26 @@
 
   <nav id="sidebar">
     <ul>
-      <li><a href="../index.html">Início</a></li>
-      <li><a href="coletas.html">Pontos de Coleta</a></li>
-      <li><a href="sus.html">Sustentabilidade</a></li>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="navegation/coletas.html">Pontos de Coleta</a></li>
+      <li><a href="navegation/sus.html">Sustentabilidade</a></li>
+      <li><a href="utilization.html">Reutilização</a></li>
     </ul>
   </nav>
     <script src="../script/scriptmenu.js"></script>
-    <div>
-      <h1> TURU TURURURURURU TURURURuRURU</h1>
+    <div class="tab-bar">
+    <button class="tab-button" onclick="openTab('home')">Início</button>
+    <button class="tab-button" onclick="openTab('about')">Plastico</button>
+    <button class="tab-button" onclick="openTab('contact')">Outros</button>
+    <button class="tab-button" onclick="openTab('pão')">Pão</button>
+  </div>
 
-    </div>
-</body>
+  <div id="home" class="tab-content">
+    <h1>A importacia da Reutilização e a reciclagem</h1>
+    <h6>Pão</h6>
+  </div>
+  <div id="about" class="tab-content" style="display:none;">Informações sobre nós.</div>
+  <div id="contact" class="tab-content" style="display:none;">Entre em contato conosco.</div>
+  <div id="pão" class="tab-content" style="display:none;">paes</div>
+
 </html>
