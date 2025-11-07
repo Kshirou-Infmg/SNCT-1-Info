@@ -65,7 +65,8 @@ main {
 }
 
 .conteudo {
-  max-width: 800px;
+  width: 90%;
+  max-width: 1200px;
   margin: 0 auto;
   background-color: #ffffff;
   padding: 30px;
@@ -167,6 +168,7 @@ main {
     margin-bottom: 12px;
   }
 }
+
 
 
 
