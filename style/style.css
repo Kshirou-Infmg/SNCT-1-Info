@@ -61,11 +61,11 @@ header h1 {
 }
 /*Conteúdo principal*/
 main {
-  padding: 40px 20px;
+  padding: 10px 5px;
 }
 
 .conteudo {
-  max-width: 1200px;
+  max-width: 800px;
   margin: 0 auto;
   background-color: #ffffff;
   padding: 30px;
@@ -167,6 +167,7 @@ main {
     margin-bottom: 12px;
   }
 }
+
 
 
 
