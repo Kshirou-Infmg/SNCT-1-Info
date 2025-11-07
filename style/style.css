@@ -61,7 +61,9 @@ header h1 {
 }
 /*Conteúdo principal*/
 main {
-  padding: 10px 5px;
+  width: 100%;
+  padding: 40px 20px;
+  box-sizing: border-box;
 }
 
 .conteudo {
@@ -168,6 +170,7 @@ main {
     margin-bottom: 12px;
   }
 }
+
 
 
 
