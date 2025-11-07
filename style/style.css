@@ -123,17 +123,22 @@ main {
   }
 
   .conteudo {
+    margin: 0 auto;
+    background-color: #ffffff;
     padding: 20px;
-    box-shadow: none;
-    border-radius: 0;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
   }
 
   .conteudo h2 {
-    font-size: 24px;
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #056c4f;
   }
 
   .conteudo p {
     font-size: 16px;
   }
 }
+
 
