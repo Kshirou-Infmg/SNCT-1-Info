@@ -60,13 +60,13 @@ header h1 {
   display: block;
 }
 /*Conteúdo principal*/
-main {
+/*main {
   width: 100%;
   padding: 40px 20px;
   box-sizing: border-box;
 }
 
-/*.conteudo {
+.conteudo {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
@@ -170,6 +170,7 @@ main {
     margin-bottom: 12px;
   }
 }
+
 
 
 
