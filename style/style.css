@@ -58,35 +58,7 @@ header h1 {
 #sidebar ul li a:hover {
   background-color: #05ec8c;
   display: block;
-}
-/*Conteúdo principal*/
-/*main {
-  width: 100%;
-  padding: 40px 20px;
-  box-sizing: border-box;
-}
 
-.conteudo {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  background-color: #ffffff;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-.conteudo h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
-  color: #056c4f;
-}
-
-.conteudo p {
-  font-size: 18px;
-  line-height: 1.6;
-  text-align: justify;
-}*/
 
 @media (max-width: 600px) {
   header {
@@ -170,6 +142,7 @@ header h1 {
     margin-bottom: 12px;
   }
 }
+
 
 
 
