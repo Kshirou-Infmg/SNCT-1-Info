@@ -12,7 +12,11 @@ header h1 {
   color: #056c4f;
   margin: 0;
 }
-
+body {
+  font-family: 'Open Sans', Arial, sans-serif;
+  /*font-size: 16px;*/
+  color: #333;
+}
 .menu-btn {
   font-size: 30px;
   background: none;
@@ -148,6 +152,7 @@ header h1 {
   background-color: #05ec8c42;
   border-bottom: 2px solid #05ec8c;
 }
+
 
 
 
