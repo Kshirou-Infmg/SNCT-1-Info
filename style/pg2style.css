@@ -1,3 +1,9 @@
+/*referente a coletas.html*/
+body {
+  font-family: 'Open Sans', Arial, sans-serif;
+  /*font-size: 16px;*/
+  color: #333;
+}
 /* Cabeçalho */
 header {
   display: flex;

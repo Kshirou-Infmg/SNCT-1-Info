@@ -1,3 +1,9 @@
+/*referente a sus.html ඞ*/
+body {
+  font-family: 'Open Sans', Arial, sans-serif;
+  /*font-size: 16px;*/
+  color: #333;
+}
 /* Cabeçalho */
 header {
   display: flex;
@@ -67,7 +73,7 @@ header h1 {
 .tab-button {
   flex: 1;
   padding: 10px;
-  color: white;
+  color: #333;/*é melhor mais escuro do que branco*/
   background-color: #23d88d49;
   border: none;
   cursor: pointer;
@@ -157,7 +163,7 @@ header h1 {
     font-size: 16px;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    background-color: #ffffff;
+    background-color: white;
     margin: 10px;
   }
 }
