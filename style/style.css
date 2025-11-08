@@ -141,11 +141,16 @@ header h1 {
 }
 
 .faixa-final {
+  position: relative;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  margin: 0;
+  padding: 30px 20px;
   background-color: #05ec8c42;
   color: black;
-  padding: 30px 20px;
   text-align: left;
-  margin: 0;
-  width: 100vw;
   font-size: 16px;
 }
+
+
