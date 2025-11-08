@@ -88,14 +88,16 @@ img {
 
 /* ===== Responsividade ===== */
 @media (max-width: 600px) {
+  media (max-width: 600px) {
   header {
     flex-direction: column;
-    align-items: flex-start;
-    padding: 10px;
+    align-items: center;
+    padding: 15px;
   }
 
   header h1 {
     font-size: 28px;
+    text-align: center;
   }
 
   main {
@@ -195,5 +197,6 @@ body.dark-mode .conteudo h2 {
 body.dark-mode .conteudo p {
   color: #f5f5f5;
 }
+
 
 
