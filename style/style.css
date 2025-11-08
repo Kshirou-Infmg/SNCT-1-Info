@@ -73,6 +73,15 @@ a {
   color: #056c4f;
   transition: color 0.3s ease;
 }
+.img-cachoeira {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
 
 /* ===== Responsividade ===== */
 @media (max-width: 600px) {
@@ -166,3 +175,4 @@ body.dark-mode .faixa-final {
   background-color: #222;
   color: #f5f5f5;
 }
+
