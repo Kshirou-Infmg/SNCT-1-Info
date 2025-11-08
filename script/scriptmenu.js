@@ -17,8 +17,11 @@ function toggleDarkMode() {
     localStorage.setItem("theme", "light");
   }
 }
-window.onload = () => {
+
+window.addEventListener("DOMContentLoaded", () => {
   if (localStorage.getItem("theme") === "dark") {
     document.body.classList.add("dark-mode");
   }
-};
+});
+
+
