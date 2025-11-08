@@ -142,6 +142,16 @@ header h1 {
     margin-bottom: 12px;
   }
 }
+  .faixa-final {
+  background-color: #DBEAD5; 
+  color: white;              
+  padding: 30px 20px;        
+  text-align: left;        
+  margin-top: 40px;          
+  font-size: 16px;
+}
+
+
 
 
 
