@@ -3,8 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <title>SNCT - Projeto Sustentável</title>
-  <link rel="stylesheet" href="../style/pg3style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../style/pg3style.css">
+  <style>
+    .conteudo-principal { padding: 16px; }
+    .tab-bar { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+    .tab-content h1 { margin-top: 0; }
+
+    .lista-reciclagem { list-style: none; padding: 0; margin: 0; }
+    .lista-reciclagem li { margin-bottom: 18px; }
+
+    .item-top { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+    .item-top img { width: 24px; height: 24px; object-fit: contain; }
+
+    .video-container {
+      position: relative;
+      width: 100%;
+      max-width: 560px; 
+      margin: 10px 0;
+      padding-bottom: 56.25%; 
+      height: 0;
+      overflow: hidden;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    @media (max-width: 480px) {
+      .video-container { max-width: 100%; }
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -36,56 +72,63 @@
         <h2>Reciclagem Criativa em Casa</h2>
         <p>A reciclagem doméstica é uma forma inteligente de transformar resíduos em soluções úteis e sustentáveis. Com criatividade, é possível reaproveitar materiais comuns do dia a dia e dar a eles uma nova função.</p>
 
-        <ul style="list-style: none; padding: 0;">
-          <li style="margin-bottom: 30px;">
-            <div style="display: flex; align-items: center; margin-bottom: 10px;">
-              <img src="https://randonembalagens.com.br/wp-content/uploads/2021/06/GARRAFA-PET-510ML-AGUAS-E-SUCOS-AZUL-CIANO.png" alt="Garrafa PET" style="width: 24px; height: 24px; margin-right: 10px;">
-              <b>Garrafas PET:</b> viram regadores, vasos, itens úteis e diversas outras coisas.
+        <ul class="lista-reciclagem">
+          <li>
+            <div class="item-top">
+              <img src="https://randonembalagens.com.br/wp-content/uploads/2021/06/GARRAFA-PET-510ML-AGUAS-E-SUCOS-AZUL-CIANO.png" alt="Garrafa PET">
+              <b>Garrafas PET:</b>
+              <span>viram regadores, vasos, itens úteis e diversas outras coisas.</span>
             </div>
-            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 10px 0;">
+            <div class="video-container">
               <iframe 
                 src="https://www.youtube.com/embed/U0vhOtnZC4A?si=Zj73W-7DLI3MYTyB" 
                 title="YouTube video player" 
-                frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                 referrerpolicy="strict-origin-when-cross-origin" 
-                allowfullscreen 
-                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                allowfullscreen>
               </iframe>
             </div>
           </li>
 
-          <li style="margin-bottom: 30px;">
-            <div style="display: flex; align-items: center; margin-bottom: 10px;">
-              <img src="https://png.pngtree.com/png-vector/20191027/ourmid/pngtree-realistic-paper-roll-vector-template-blank-white-toilet-paper-roll-mock-png-image_1886147.jpg" alt="Papel Higiênico" style="width: 24px; height: 24px; margin-right: 10px;">
-              <b>Rolos de papel higiênico:</b> ótimos para organizar cabos, criar brinquedos educativos e decorações.
+          <li>
+            <div class="item-top">
+              <img src="https://png.pngtree.com/png-vector/20191027/ourmid/pngtree-realistic-paper-roll-vector-template-blank-white-toilet-paper-roll-mock-png-image_1886147.jpg" alt="Papel Higiênico">
+              <b>Rolos de papel higiênico:</b>
+              <span>ótimos para organizar cabos, criar brinquedos educativos e decorações.</span>
             </div>
-            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 10px 0;">
+            <div class="video-container">
               <iframe 
                 src="https://www.youtube.com/embed/K4AQOmsa4n4?si=7OdzPSnmOw0cQNFq" 
                 title="YouTube video player" 
-                frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                 referrerpolicy="strict-origin-when-cross-origin" 
-                allowfullscreen 
-                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                allowfullscreen>
               </iframe>
             </div>
           </li>
 
-          <li style="display: flex; align-items: center; margin-bottom: 10px;">
-            <img src="https://img.freepik.com/vetores-premium/um-frasco-de-vidro-vazio-claro-com-um-rotulo-que-diz-vazio_788759-23506.jpg?semt=ais_hybrid&w=740&q=80" alt="Pote de vidro" style="width: 24px; height: 24px; margin-right: 10px;">
-            <b>Vidros de conserva:</b> podem se tornar porta-velas, luminárias ou potes para alimentos.
+          <li>
+            <div class="item-top">
+              <img src="https://img.freepik.com/vetores-premium/um-frasco-de-vidro-vazio-claro-com-um-rotulo-que-diz-vazio_788759-23506.jpg?semt=ais_hybrid&w=740&q=80" alt="Pote de vidro">
+              <b>Vidros de conserva:</b>
+              <span>podem se tornar porta-velas, luminárias ou potes para alimentos.</span>
+            </div>
           </li>
 
-          <li style="display: flex; align-items: center; margin-bottom: 10px;">
-            <img src="https://images.vexels.com/media/users/3/153096/isolated/preview/9f420eda3be1ce9b846edc9cba4bc84a-icone-de-traco-de-camiseta-com-gola-redonda.png" alt="Camisetas" style="width: 24px; height: 24px; margin-right: 10px;">
-            <b>Camisetas velhas:</b> transformam-se em sacolas reutilizáveis ou panos de limpeza.
+          <li>
+            <div class="item-top">
+              <img src="https://images.vexels.com/media/users/3/153096/isolated/preview/9f420eda3be1ce9b846edc9cba4bc84a-icone-de-traco-de-camiseta-com-gola-redonda.png" alt="Camisetas">
+              <b>Camisetas velhas:</b>
+              <span>transformam-se em sacolas reutilizáveis ou panos de limpeza.</span>
+            </div>
           </li>
 
-          <li style="display: flex; align-items: center; margin-bottom: 10px;">
-            <img src="https://img.freepik.com/vetores-gratis/adesivo-caixa-vazia-aberta-em-fundo-branco_1308-68243.jpg?semt=ais_hybrid&w=740&q=80" alt="Caixa de papelão" style="width: 24px; height: 24px; margin-right: 10px;">
-            <b>Caixas de papelão:</b> servem como organizadores de gaveta ou brinquedos infantis.
+          <li>
+            <div class="item-top">
+              <img src="https://img.freepik.com/vetores-gratis/adesivo-caixa-vazia-aberta-em-fundo-branco_1308-68243.jpg?semt=ais_hybrid&w=740&q=80" alt="Caixa de papelão">
+              <b>Caixas de papelão:</b>
+              <span>servem como organizadores de gaveta ou brinquedos infantis.</span>
+            </div>
           </li>
         </ul>
 
