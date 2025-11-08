@@ -3,8 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <title>SNCT - Projeto Sustentável</title>
-  <link rel="stylesheet" href="../style/pg3style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../style/pg3style.css">
+  <style>
+    .conteudo-principal { padding: 16px; }
+    .tab-bar { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+    .tab-content h1 { margin-top: 0; }
+
+    .lista-reciclagem { list-style: none; padding: 0; margin: 0; }
+    .lista-reciclagem li { margin-bottom: 18px; }
+
+    .item-top { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+    .item-top img { width: 24px; height: 24px; object-fit: contain; }
+
+    .video-container {
+      position: relative;
+      width: 100%;
+      max-width: 640px; 
+      margin: 10px 0;
+      padding-bottom: 25%; 
+      height: 0;
+      overflow: hidden;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    @media (max-width: 480px) {
+      .video-container { max-width: 100%; }
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -19,9 +55,10 @@
       <li><a href="coletas.html">Pontos de Coleta</a></li>
     </ul>
   </nav>
-      <script src="../script/scriptmenu.js"></script>
-  <div>
-      
+
+  <script src="../script/scriptmenu.js"></script>
+
+  <div class="conteudo-principal">
     <div class="tab-bar">
     <button class="tab-button" onclick="openTab('home')">Recomendações</button>
     <button class="tab-button" onclick="openTab('plastico')">Descarte de Plastico</button>
@@ -35,47 +72,122 @@
   <h2>Reciclagem Criativa em Casa</h2>
   <p>A reciclagem doméstica é uma forma inteligente de transformar resíduos em soluções úteis e sustentáveis. Com criatividade, é possível reaproveitar materiais comuns do dia a dia e dar a eles uma nova função.</p>
 
-  <ul style="list-style: none; padding: 0;">
-    <li style="display: flex; align-items: center; margin-bottom: 10px;">
-      <span class="icone" style="margin-right: 10px;">🧴</span>
-      <b>Garrafas PET:</b> viram regadores, vasos ou organizadores de objetos.
-    </li>
-    <li style="display: flex; align-items: center; margin-bottom: 10px;">
-      <span class="icone" style="margin-right: 10px;">🧻</span>
-      <b>Rolos de papel higiênico:</b> ótimos para organizar cabos ou criar brinquedos educativos.
-    </li>
-    <li style="display: flex; align-items: center; margin-bottom: 10px;">
-      <span class="icone" style="margin-right: 10px;">🥫</span>
-      <b>Vidros de conserva:</b> podem se tornar porta-velas, luminárias ou potes para alimentos.
-    </li>
-    <li style="display: flex; align-items: center; margin-bottom: 10px;">
-      <span class="icone" style="margin-right: 10px;">👕</span>
-      <b>Camisetas velhas:</b> transformam-se em sacolas reutilizáveis ou panos de limpeza.
-    </li>
-    <li style="display: flex; align-items: center; margin-bottom: 10px;">
-      <span class="icone" style="margin-right: 10px;">📦</span>
-      <b>Caixas de papelão:</b> servem como organizadores de gaveta ou brinquedos infantis.
-    </li>
-  </ul>
+        <ul class="lista-reciclagem">
+          <li>
+            <div class="item-top">
+              <img src="https://randonembalagens.com.br/wp-content/uploads/2021/06/GARRAFA-PET-510ML-AGUAS-E-SUCOS-AZUL-CIANO.png" alt="Garrafa PET">
+              <b>Garrafas PET:</b>
+              <span>viram regadores, vasos, itens úteis e diversas outras coisas.</span>
+            </div>
+            <div class="video-container">
+              <iframe 
+                src="https://www.youtube.com/embed/U0vhOtnZC4A?si=Zj73W-7DLI3MYTyB" 
+                title="YouTube video player" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+              </iframe>
+            </div>
+          </li>
 
-  <p>Além de reduzir o lixo, essas práticas estimulam a criatividade e promovem a consciência ambiental. Experimente aplicar essas ideias no seu dia a dia e compartilhe com quem você conhece!</p>
+          <li>
+            <div class="item-top">
+              <img src="https://png.pngtree.com/png-vector/20191027/ourmid/pngtree-realistic-paper-roll-vector-template-blank-white-toilet-paper-roll-mock-png-image_1886147.jpg" alt="Papel Higiênico">
+              <b>Rolos de papel higiênico:</b>
+              <span>ótimos para organizar cabos, criar brinquedos educativos e decorações.</span>
+            </div>
+            <div class="video-container">
+              <iframe 
+                src="https://www.youtube.com/embed/K4AQOmsa4n4?si=7OdzPSnmOw0cQNFq" 
+                title="YouTube video player" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+              </iframe>
+            </div>
+          </li>
 
-  <p>Saiba mais em <a href="https://www.cantinhodaeducacao.com.br/2025/05/10-ideias-criativas-e-praticas-para.html" target="_blank">Cantinho da Educação</a>.</p>
-</section>
-    <h6>Pão</h6>
-  </div>
-  <div id="plastico" class="tab-content" style="display:none;">
-    Informações sobre descarte correto de plástico.
-  </div>
-  <div id="electron" class="tab-content" style="display:none;">
-    Informações sobre descarte correto de eletronicos.
-  </div>
-  <div id="more" class="tab-content" style="display:none;">
-    ඞ
-    <small style="color: white;">paes</small>
-  </div>
+          <li>
+            <div class="item-top">
+              <img src="https://img.freepik.com/vetores-premium/um-frasco-de-vidro-vazio-claro-com-um-rotulo-que-diz-vazio_788759-23506.jpg?semt=ais_hybrid&w=740&q=80" alt="Pote de vidro">
+              <b>Vidros de conserva:</b>
+              <span>podem se tornar itens decorativos, canecas e diversas outras coisas.</span>
+            </div>
+          </li>
+          <div class="video-container">
+          <iframe
+              src="https://www.youtube.com/embed/dsNj-aHgydU?si=KcGJqZ3eaib0a0uy"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                loading="lazy"
+              allowfullscreen>
+          </iframe>
+    </div>
 
-    
+          <li>
+            <div class="item-top">
+              <img src="https://images.vexels.com/media/users/3/153096/isolated/preview/9f420eda3be1ce9b846edc9cba4bc84a-icone-de-traco-de-camiseta-com-gola-redonda.png" alt="Camisetas">
+              <b>Camisetas velhas:</b>
+              <span>transformam-se em itens decorativos tambem! como tambem serem tornadas em outras vestimentas e etc.</span>
+            </div>
+          </li>
+        <div class="video-container">
+        <iframe
+          src="https://www.youtube.com/embed/avoDa9-6NGY?si=J0iVcNLMiWD2OAyL"
+            title="YouTube video player"
+              frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+                loading="lazy"
+            allowfullscreen>
+    </iframe>
+</div>
+
+          <li>
+            <div class="item-top">
+              <img src="https://img.freepik.com/vetores-gratis/adesivo-caixa-vazia-aberta-em-fundo-branco_1308-68243.jpg?semt=ais_hybrid&w=740&q=80" alt="Caixa de papelão">
+              <b>Caixas de papelão:</b>
+              <span>servem como organizadores de gaveta ou brinquedos infantis.</span>
+            </div>
+          </li>
+          <div class="video-container">
+  <iframe
+    src="https://www.youtube.com/embed/Bkq5UTwkvRg?si=fHyHrh_hapJ4wihf"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    loading="lazy"
+    allowfullscreen>
+  </iframe>
+</div>
+
+        </ul>
+
+        <p>Além de reduzir o lixo, essas práticas estimulam a criatividade e promovem a consciência ambiental. Experimente aplicar essas ideias no seu dia a dia e compartilhe com quem você conhece!<br>
+        <span style="font-size:8px">Saiba mais em <a href="https://www.cantinhodaeducacao.com.br/2025/05/10-ideias-criativas-e-praticas-para.html" target="_blank">Cantinho da Educação</a></span></p>
+      </section>
+
+      <h6>Pão</h6>
+    </div>
+
+    <div id="about" class="tab-content" style="display:none;">
+      Informações sobre nós.
+    </div>
+    <div id="contact" class="tab-content" style="display:none;">
+      Entre em contato conosco.
+    </div>
+    <div id="pão" class="tab-content" style="display:none;">
+      paes
+    </div>
   </div>
-  </body>
+</body>
 </html>
+
+
+
+
+
+
