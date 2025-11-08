@@ -81,7 +81,10 @@ a {
   border-radius: 12px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
-
+img {
+  max-width: 100%;
+  height: auto;
+}
 
 /* ===== Responsividade ===== */
 @media (max-width: 600px) {
@@ -175,4 +178,5 @@ body.dark-mode .faixa-final {
   background-color: #222;
   color: #f5f5f5;
 }
+
 
