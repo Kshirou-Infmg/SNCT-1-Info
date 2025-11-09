@@ -1,42 +1,27 @@
-// === Inicialização do mapa ===
-var map = L.map('map').setView([-17.857, -41.508], 13);
+//Inicialização do mapa
+var map = L.map('map').setView([-17.857, -41.508], 14);
 
-// Camada clara
+//Camada clara
 var mapaClaro = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '© OpenStreetMap'
 });
 
-// Camada escura
+//Camada escura
 var mapaEscuro = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
   attribution: '© OpenStreetMap © Carto',
   subdomains: 'abcd',
   maxZoom: 20
 });
 
-// Verifica preferência salva e aplica
+//Aplica tema salvo
 const savedTheme = localStorage.getItem("theme");
 if (savedTheme === "dark") {
-  document.body.classList.add("dark-mode");
   mapaEscuro.addTo(map);
 } else {
   mapaClaro.addTo(map);
 }
 
-// === Função para alternar modo escuro ===
-function toggleDarkMode() {
-  const isDark = document.body.classList.toggle("dark-mode");
-  localStorage.setItem("theme", isDark ? "dark" : "light");
-
-  if (isDark) {
-    map.removeLayer(mapaClaro);
-    map.addLayer(mapaEscuro);
-  } else {
-    map.removeLayer(mapaEscuro);
-    map.addLayer(mapaClaro);
-  }
-}
-
-// === Marcadores dos pontos de coleta ===
+//Marcadores dos pontos de coleta
 L.marker([-17.892662984832256, -41.523976461703825]).addTo(map)
   .bindPopup('<b>Reciclagem Campos</b><br>Av. Alfredo Sá, 2597, Jardim das Acácias. Centro de reciclagem. Abre segunda às 07:30.');
 
