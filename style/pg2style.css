@@ -94,11 +94,13 @@ main {
 #map {
   height: 600px;          /* aumenta a altura no PC */
   width: 100%;
-  max-width: 1000px;      /* pode expandir mais */
+  max-width: 800px;      /* pode expandir mais */
   border: 4px solid #056c4f;
   border-radius: 12px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   transition: border-color 0.3s ease, background-color 0.3s ease;
+   margin: 0 auto;
+  display: block;
 }
 
 /* ===== Mobile===== */=
@@ -210,6 +212,7 @@ body.dark-mode .leaflet-popup-content-wrapper {
 body.dark-mode .leaflet-popup-tip {
   background: #0d1b2a;   /* azul escuro */
 }
+
 
 
 
