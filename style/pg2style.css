@@ -160,4 +160,27 @@ body.dark-mode #map {
   border-color: #444;   /* borda mais discreta */
   background-color: #1e1e1e; /* fundo escuro enquanto carrega */
 }
+/* Popups padrão (modo claro) */
+.leaflet-popup-content-wrapper {
+  background: #fff;
+  color: #333;
+  border-radius: 8px;
+  padding: 5px;
+}
+
+.leaflet-popup-tip {
+  background: #fff;
+}
+
+/* Popups no modo escuro */
+body.dark-mode .leaflet-popup-content-wrapper {
+  background: #0d1b2a;   /* azul escuro */
+  color: #e0e0e0;        /* texto claro */
+  border: 1px solid #1b263b;
+}
+
+body.dark-mode .leaflet-popup-tip {
+  background: #0d1b2a;   /* azul escuro */
+}
+
 
