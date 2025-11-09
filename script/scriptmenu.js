@@ -12,3 +12,14 @@ function toggleDarkMode() {
   const isDark = document.body.classList.toggle("dark-mode");
   localStorage.setItem("theme", isDark ? "dark" : "light");
 }
+  //codiguin para que se o mapa já existe, alterna a camada
+  if (typeof map !== "undefined") {
+    if (isDark) {
+      map.removeLayer(mapaClaro);
+      map.addLayer(mapaEscuro);
+    } else {
+      map.removeLayer(mapaEscuro);
+      map.addLayer(mapaClaro);
+    }
+  }
+}
