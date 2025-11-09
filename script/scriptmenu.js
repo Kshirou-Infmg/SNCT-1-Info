@@ -1,5 +1,13 @@
 function toggleMenu() {
-  document.getElementById("sidebar").classList.toggle("active");
+  const sidebar = document.getElementById("sidebar");
+  const isActive = sidebar.classList.toggle("active");
+
+  // adiciona overlay no mobile
+  if (isActive) {
+    document.body.classList.add("menu-open");
+  } else {
+    document.body.classList.remove("menu-open");
+  }
 }
 
 function openTab(tabId) {
@@ -11,8 +19,8 @@ function openTab(tabId) {
 function toggleDarkMode() {
   const isDark = document.body.classList.toggle("dark-mode");
   localStorage.setItem("theme", isDark ? "dark" : "light");
-}
-  //codiguin para que se o mapa já existe, alterna a camada
+
+  // se o mapa já existe, alterna a camada na hora
   if (typeof map !== "undefined") {
     if (isDark) {
       map.removeLayer(mapaClaro);
