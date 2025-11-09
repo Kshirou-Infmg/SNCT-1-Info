@@ -101,7 +101,7 @@ main {
   transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
-/* ===== Mobile ===== */
+/* ===== Mobile===== */=
 @media (max-width: 600px) {
   header {
     flex-direction: column;
@@ -117,6 +117,34 @@ main {
   .menu-btn {
     font-size: 28px;
   }
+  /* Sidebar no mobile */
+  #sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;          /* escondido por padrão */
+    width: 70%;            /* ocupa parte da tela */
+    height: 100%;
+    background-color: #056c4f;
+    color: white;
+    padding-top: 60px;
+    transition: left 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    z-index: 1000;         /* fica acima do conteúdo */
+  }
+
+  #sidebar.active {
+    left: 0;               /* aparece quando ativo */
+  }
+
+  /* Overlay atrás do menu */
+  body.menu-open::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5); /* escurece fundo */
+    z-index: 999;                /* abaixo do menu */
+  }
+}
 
   #titulo-mapa {
     font-size: 22px;
@@ -182,5 +210,6 @@ body.dark-mode .leaflet-popup-content-wrapper {
 body.dark-mode .leaflet-popup-tip {
   background: #0d1b2a;   /* azul escuro */
 }
+
 
 
