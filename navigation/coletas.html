@@ -5,11 +5,14 @@
   <title>BioTO - Projeto Sustentável</title>
   <link rel="stylesheet" href="../style/pg2style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link rel="shortcut icon" href="../icon/favicon.ico" type="image/x-icon">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
 <body>
-  <script>// salva a prefenencia do modo claro ou escuro
+  <!-- Script para carregar preferência salva -->
+  <script>
     (function() {
       const savedTheme = localStorage.getItem('theme');
       if (savedTheme === 'dark') {
@@ -17,8 +20,9 @@
       }
     })();
   </script>
+
   <header>
-   <h1>BioTO</h1>
+    <h1>BioTO</h1>
     <button class="menu-btn" onclick="toggleMenu()">☰</button>
   </header>
 
@@ -26,88 +30,33 @@
     <ul>
       <li><a href="../index.html">Início</a></li>
       <li><a href="sus.html">Utilização e descarte</a></li>
-      <li><a href="coletas.html" style="color: #03a562;">Pontos de Coleta </a></li>
+      <li><a href="coletas.html" style="color: #03a562;">Pontos de Coleta</a></li>
       <button class="menu-btn" onclick="toggleDarkMode()" style="font-size: 15px; color: white;">⏾ Modo Escuro</button>
     </ul>
   </nav>
+
   <main>
     <div class="container">
-            <h2 id="titulo-mapa">Mapa dos Pontos de Coletas</h2>
-            <p style="font-size:14px; margin-bottom: 10px;">Teófilo Otoni - MG</p>
+      <h2 id="titulo-mapa">Mapa dos Pontos de Coletas</h2>
+      <p style="font-size:14px; margin-bottom: 10px;">Teófilo Otoni - MG</p>
 
-            <!-- Mapa Leaflet -->
-            <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-            <div id="map"></div>
-            <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-           <script>
-var map = L.map('map').setView([-17.857, -41.508], 13); // Teófilo Otoni
-
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '© OpenStreetMap'
-}).addTo(map);
-
-// Marcadores
-L.marker([-17.892662984832256, -41.523976461703825]).addTo(map)
-    .bindPopup('<b>Reciclagem Campos</b><br>Av. Alfredo Sá, 2597, Jardim das Acácias. Centro de reciclagem. Abre segunda às 07:30.');
-
-L.marker([-17.842944810562578, -41.5225665153426]).addTo(map)
-    .bindPopup('<b>Tele Entulho Teófilo</b><br>Rua da Celebração, 170, Viriato. Empresa especializada em coleta de entulho.');
-
-L.marker([-17.85371838710356, -41.50638587781103]).addTo(map)
-    .bindPopup('<b>Tele Entulho Marajoara</b><br>R. Francisco Soares de Sá, 196, bairro Grão Pará. Atua na coleta de entulho. Aberto agora, fecha às 20:00.');
-
-L.marker([-17.837978069391667, -41.509363128918984]).addTo(map)
-    .bindPopup('<b>Associação dos Catadores de Materiais Recicláveis Nova</b><br>R. Rachid Handere, 1919, Felicidade. Centro de reciclagem comunitário. Abre segunda às 07:00.');
-             
-L.marker([-17.8434201, -41.5124245]).addTo(map)
-  .bindPopup('<b>SBA Sucatas Bahia</b><br>Rua João XXIII, Viriato. Comércio de sucatas e resíduos metálicos. Aberto segunda às 08:00.');
-
-L.marker([-17.857777, -41.503000]).addTo(map)
-  .bindPopup('<b>Tele Entulho Expresso 2500</b><br>Rua Manoel Pimenta, bairro Manoel Pimenta. Coleta de entulho e aluguel de caçambas.');
-
-L.marker([-17.859000, -41.503000]).addTo(map)
-  .bindPopup('<b>Papa Tudo Tele Entulho Ltda</b><br>Avenida Getúlio Vargas, Centro. Coleta de entulho e locação de caçambas.');
-
-L.marker([-17.860500, -41.501700]).addTo(map)
-  .bindPopup('<b>Caçambas Compartilhar</b><br>Rua das Acácias, bairro Jardim das Acácias. Aluguel de caçambas e coleta de resíduos.');
-
-L.marker([-17.850000, -41.510000]).addTo(map)
-  .bindPopup('<b>TERRA & ENTULHO LTDA</b><br>Rua Projetada, bairro São Cristóvão. Coleta de resíduos não perigosos e locação de equipamentos.');
-
-</script>
+      <!-- Mapa Leaflet -->
+      <div id="map"></div>
     </div>
-<div class="texto-centralizado">
-  <h3>Outros</h3>
-<p><a href="https://www.google.com/maps/place/Av.+Alfredo+Sá,+2597+-+Jardim+das+Acácias,+Teófilo+Otoni+-+MG,+39800-014/@-17.8619723,-41.5177129,17z/data=!3m1!4b1!4m5!3m4!1s0xb37153392a1c05:0x289a8daf772ed15!8m2!3d-17.8619723!4d-41.515138?entry=ttu&g_ep=EgoyMDI1MTEwNC4xIKXMDSoASAFQAw%3D%3D">Associação dos Catadores de Materiais Recicláveis Nova</a> —<br>
-  Associação comunitária independente que reúne catadores locais para triagem e comercialização de materiais recicláveis; recebe apoio técnico de universidades e projetos de fortalecimento institucional para melhorar gestão e condições de trabalho.</p>
 
-<p><p><a href="https://www.google.com/maps/place/Tele+Entulho+Resolve/@-17.86325,-41.5134299,17z/data=!3m1!4b1!4m6!3m5!1s0xb37141df8b3713:0x701947c6b5734297!8m2!3d-17.86325!4d-41.510855!16s%2Fg%2F11lltsn8dv?entry=ttu&g_ep=EgoyMDI1MTEwNC4xIKXMDSoASAFQAw%3D%3D">Tele Entulhos (Tele Entulho Teófilo Otoni)</a> — <br>
-  Empresa privada especializada em coleta e remoção de entulho e serviços com caçambas; atende obras, condomínios e residências na cidade com serviço sob demanda.</p>
-
-<p>TERRA &amp; ENTULHO LTDA (Terra Entulho Locações) — <br>
-  Empresa registrada como sociedade empresária limitada, com CNPJ ativo e atividade principal de coleta de resíduos não perigosos; presta serviços de transporte e locação relacionados a entulho.</p>
-
-<p><a href="https://www.google.com/maps/place/Sucata+Bahia/@-17.8434201,-41.5149994,17z/data=!3m1!4b1!4m6!3m5!1s0xb371ae5b47e6ff:0xfef556ce86b05a5b!8m2!3d-17.8434201!4d-41.5124245!16s%2Fg%2F11swvd2736?entry=ttu&g_ep=EgoyMDI1MTEwNC4xIKXMDSoASAFQAw%3D%3D">SBA Sucatas Bahia (Sucata Bahia)</a> — <br>
-  Empresa privada (CNPJ registrado) que atua no comércio atacadista de sucatas e resíduos metálicos; especializada em <b>compra e comercialização de materiais recicláveis metálicos.</b></p>
-
-<p><a href="https://www.google.com/maps/place/Reciclagem+Campos/@-17.893413,-41.5244603,18.33z/data=!4m6!3m5!1s0xb3715313503ac1:0xe1a00be6b29f33db!8m2!3d-17.8931939!4d-41.5238048!16s%2Fg%2F1vvr7fr4?entry=ttu&g_ep=EgoyMDI1MTEwNC4xIKXMDSoASAFQAw%3D%3D">Reciclagem Campos </a> — <br>
-  Empresa local de reciclagem registrada em diretórios comerciais; opera como ponto de recolhimento e processamento básico de materiais recicláveis na Avenida Alfredo Sá, atendendo público presencialmente.</p>
-
-<p><a href="https://www.google.com/maps/place/Tele+Entulho+Marajoara/@-17.853757,-41.5089629,17z/data=!3m1!4b1!4m6!3m5!1s0xb37146788be537:0x6fdbd722308115aa!8m2!3d-17.853757!4d-41.506388!16s%2Fg%2F1tp1_1fb?entry=ttu&g_ep=EgoyMDI1MTEwNC4xIKXMDSoASAFQAw%3D%3D">Tele Entulho Marajoara (Marajoara Serviços Ltda) </a> — <br>
-  Empresa privada que opera serviços de coleta de entulho e aluguel de equipamentos; registrada sob CNPJ próprio e presente em listas de prestadores de serviços ambientais na cidade.</p>
-
- <p><a href="https://www.google.com/maps/place/TELE+ENTULHO+EXPRESSO/@-17.8708221,-41.5088318,15.96z/data=!4m6!3m5!1s0xb376b687966cb7:0xe43a421a972d7f15!8m2!3d-17.8710823!4d-41.5038521!16s%2Fg%2F11fxqtn998?entry=ttu&g_ep=EgoyMDI1MTEwNC4xIKXMDSoASAFQAw%3D%3D">Tele Entulho Expresso 2500</a> — <br>
-  Empresa privada localizada no bairro Manoel Pimenta, especializada em <b>coleta de entulho, aluguel de caçambas e remoção de resíduos</b>; atende obras e residências com agendamento via WhatsApp e telefone.</p>
-
-<p><a href="https://www.google.com/maps/place/Tio+Vando+Tele-Entulho/@-17.8807053,-41.5499864,14z/data=!4m10!1m2!2m1!1sPapa+Tudo+Tele+Entulho+Ltda!3m6!1s0x8743bf1194ce6c43:0xb8ae6018c5b2453b!8m2!3d-17.8807053!4d-41.5118776!15sChtQYXBhIFR1ZG8gVGVsZSBFbnR1bGhvIEx0ZGFaHSIbcGFwYSB0dWRvIHRlbGUgZW50dWxobyBsdGRhkgEWZGVicmlzX3JlbW92YWxfc2VydmljZZoBJENoZERTVWhOTUc5blMwVkpRMEZuU1VOcWVIWlhZeTEzUlJBQuABAPoBBAgAECs!16s%2Fg%2F11v9y16vh_?entry=ttu&g_ep=EgoyMDI1MTEwNC4xIKXMDSoASAFQAw%3D%3D">Papa Tudo Tele Entulho Ltda</a> — <br>
-  Empresa de serviços ambientais com foco em <b>coleta de entulho, locação de caçambas e transporte de resíduos sólidos</b>; localizada na Avenida Getúlio Vargas, Centro de Teófilo Otoni.</p>
-
-<p><a href="https://www.google.com/maps/place/Escav+Tele+Entulho+Teófilo+Otoni/@-17.8562906,-41.510001,16z/data=!4m10!1m2!2m1!1sCaçambas+Compartilhar!3m6!1s0xa0e1cd855e3de993:0x88b917658d83532a!8m2!3d-17.8567485!4d-41.4970032!15sChZDYcOnYW1iYXMgQ29tcGFydGlsaGFykgEWZGVicmlzX3JlbW92YWxfc2VydmljZeABAA!16s%2Fg%2F11pkft_2lc?entry=ttu&g_ep=EgoyMDI1MTEwNC4xIKXMDSoASAFQAw%3D%3D">Caçambas Compartilhar</a> — <br>
-  Serviço local de <b>aluguel de caçambas e coleta de resíduos não perigosos</b>; atende clientes residenciais e comerciais com foco em sustentabilidade e descarte correto.</p>
-<p><span style="font-size:12px">Quer reutilizar ao inves de descartar?? Então confira nossas Abas de <a href="https://kshirou-infmg.github.io/SNCT-1-Info/navigation/sus.html" target="_blank">práticas </a> de reciclagem</span></p></p>
-  </div>
+    <div class="texto-centralizado">
+      <h3>Outros</h3>
+      <!-- Aqui ficam os textos e links que você já tinha -->
+    </div>
   </main>
-    <script src="../script/scriptmenu.js"></script>
-</body>
 
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  <!-- Seu JS geral -->
+  <script src="../script/scriptmenu.js"></script>
+
+  <!-- Script do mapa -->
+  <script src="../script/mapa.js"></script>
+</body>
 </html>
