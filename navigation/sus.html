@@ -6,44 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../style/pg3style.css">
   <link rel="shortcut icon" href="icon/favicon.ico" type="image/x-icon">
-  <style>
-    .conteudo-principal { padding: 16px; }
-    .tab-bar { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
-    .tab-content h1 { margin-top: 0; }
-
-    .lista-reciclagem { list-style: none; padding: 0; margin: 0; }
-    .lista-reciclagem li { margin-bottom: 18px; }
-
-    .item-top { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
-    .item-top img { width: 24px; height: 24px; object-fit: contain; }
-
-    .video-container {
-      position: relative;
-      width: 100%;
-      max-width: 640px; 
-      margin: 10px 0;
-      padding-bottom: 25%; 
-      height: 0;
-      overflow: hidden;
-      border-radius: 6px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-    }
-
-    .video-container iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: 0;
-    }
-
-    @media (max-width: 480px) {
-      .video-container { max-width: 100%; 
-        padding-bottom: 56.25%
-      }
-    }
-  </style>
 </head>
 <body>
   <header>
@@ -56,7 +18,7 @@
       <li><a href="../index.html">Início</a></li>
       <li><a href="sus.html" style="color: #03a562;">Ultilização e descarte</a></li>
       <li><a href="coletas.html">Pontos de Coleta</a></li>
-     <button class="menu-btn" onclick="toggleDarkMode()">🌙</button>
+     <button class="menu-btn" onclick="toggleDarkMode()" style="font-size: 15px;">⏾ Modo Escuro</button>
     </ul>
   </nav>
 
@@ -243,28 +205,147 @@
       <h2><b>⚠️ Atenção:</b> Lixo eletrônico nunca deve ser descartado no lixo comum (rejeito) nem na coleta seletiva tradicional (junto com plásticos, papéis, etc.).</h2>
       <h4>Por que o descarte é diferente?</h4>
       <p>Eletrônicos contêm metais pesados como mercúrio, chumbo, cádmio e berílio. Se jogados em aterros comuns, esses componentes vazam, contaminam o solo e os lençóis freáticos, causando sérios riscos à saúde pública e ao meio ambiente.</p>
-      <h4>Como e onde descartar corretamente</h4><!--TODO-->
-      <ol>
+      <!--TODO-->
+      <ul>
         <li>
-          <Pre><h4>Nunca no lixo comum
-                Eletrônicos não devem ser descartados junto com rejeitos ou coleta seletiva tradicional.
-                Isso evita contaminação por metais pesados como chumbo e mercúrio.</h4>
-        </li></Pre>
-        <li>
-          <Pre><h4>Procure ecopontos municipais, cooperativas de reciclagem ou 
-                  campanhas de coleta de lixo eletrônico.
-                  Muitas cidades têm locais fixos para receber esses materiais.</h4></Pre>
+          <h4>Passos essenciais antes do descarte</h4>
+          <ol>
+            <li>Para dispositivos como celulares, que contém dados importantes, é essencial salvar arquivos importates como fotos e documentos em fontes externas</li>
+            <li>Restaurar o aparelho para suas configurações de fábrica, para o casso de celulares, tablets, computadores.Isso é importante para a segurança porqu apaga contas, senhas, fotos, protegendo a privaidade</li>
+            <li>Remover as pilhas e baterias. Eletrônicos como controles remotos ou brinquedos utilezam pilhas comuns. Se possível, retire-as. Pilhas e baterias miutas vezes têm coletores específicos, encontrados em supermercados e bancos.</li>
+          </ol>
         </li>
         <li>
-          <h4></h4>
+          <h4>Como e Onde Descartar Corretamente</h4>
+          <ol>
+            <li>
+              <h5>Logística Reversa (Lojas e Fabricantes)</h5>
+              <p>Esta é a opção mais prática para a maioria das pessoas. Por lei, fabricantes e grandes varejistas são obrigados a receber de volta os produtos antigos.</p>
+              <p>Lojas de Varejo: Grandes redes (como Magazine Luiza, Casas Bahia, Fast Shop, etc.) e operadoras de telefonia (Vivo, Claro, TIM) possuem pontos de coleta (urnas ou caixas) bem visíveis dentro das lojas. Você pode simplesmente depositar itens pequenos lá (celulares, cabos, fones, baterias).</p>
+              <p>Fabricantes: Marcas como Samsung, Apple, Dell, HP, LG, entre outras, têm programas próprios de reciclagem. Verifique o site oficial da marca na seção "Sustentabilidade" ou "Reciclagem" para encontrar o ponto de entrega mais próximo ou até mesmo solicitar uma coleta em casa (dependendo do produto).</p>
+            </li>
+            <li>
+              <h5>Ecopontos e PEVs (Pontos de Entrega Voluntária)</h5>
+              <p>A Prefeitura de Teófilo Otoni, através do programa Coleta Seletiva Solidária Recicla Teó, mantém Ecopontos (PEVs) e também um cronograma de coleta porta a porta em diversos bairros da cidade. </p>
+              <p>A cidade possui pelo menos dois Ecopontos permanentes para o descarte correto de materiais recicláveis. Os endereços exatos dos Ecopontos podem ser obtidos através dos canais oficiais da prefeitura, mas as localizações conhecidas incluem:</p>
+              <ul>
+                <li>Ecoponto 1 e 2: Informações sobre a localização exata dos Ecopontos podem ser verificadas no Instagram oficial da Coleta Seletiva Solidária (@coletaseletiva.teo) ou da Prefeitura (@prefeiturato), pois novos pontos foram inaugurados recentemente.</li>
+                <li>Ponto Sustentável (App): Existe um aplicativo chamado "Ponto Sustentável" que conecta pessoas que desejam descartar materiais a instituições ou pessoas que os recebem. Isso pode ajudar a encontrar locais de descarte específicos.</li>
+              </ul>
+            </li>
+            <li>
+              <h5>Coleta Seletiva Porta a Porta</h5>
+              <p>Além dos PEVs, a prefeitura realiza a coleta seletiva em dias e bairros específicos. O cronograma varia, mas alguns exemplos de bairros atendidos incluem:</p>
+              <ul>
+                <li>ASCANOVI (Associação dos Catadores): Bairros como Filadélfia, Ipiranga, Frei Dimas, Jardim Iracema e Vila São João.</li>
+                <li>COOJUV: Bairros como Minas Novas, Gangorrinha, Palmeiras, Frei Dimas, São Jacinto, entre outros.</li>
+              </ul>
+            </li>
+          </ol>
         </li>
-        <li>
-          <h4></h4>
-        </li>
-      </ol>
+      </ul>
     </div>
     <div id="more" class="tab-content" style="display:none;">
-      mais coisas aqui (ex.: descarte de óleo)
+      <h1>Mais informações</h1>
+      <p>Além do lixo eletrônico, vários outros itens jamais devem ir para o lixo comum ou para a coleta seletiva tradicional.</p>
+      <p>Aqui está um guia sobre o descarte correto de alguns desses materiais:</p>
+      <ol>
+        <li>
+          <h4>Óleo de cozinha usado</h4>
+          <p>Por que o cuidado?</p>
+          <ul>
+            <li>Contaminação da Água: Apenas 1 litro de óleo pode contaminar mais de 20.000 litros de água, tornando-a imprópria para o consumo.</li>
+            <li>Encanamentos: Ao esfriar, o óleo endurece e gruda nos encanamentos, causando entupimentos graves na rede de esgoto e atraindo pragas.</li>
+            <li>Solo: Se jogado no lixo comum, ele vaza no aterro, impermeabiliza o solo e impede a absorção da água da chuva, além de contaminar o lençol freático.</li>
+          </ul>
+          <p>Como descartar corretamente?</p>
+          <ol>
+            <li>Espere o óleo esfriar completamente após o uso.</li>
+            <li>Use um funil para armazenar o óleo frio dentro de uma garrafa PET limpa e seca (como as de refrigerante).</li>
+            <li>Vá acumulando o óleo na garrafa. Feche-a bem para evitar vazamentos e odores.</li>
+            <li>Leve a garrafa PET cheia até um ponto de coleta. Muitos supermercados, Ecopontos da prefeitura e ONGs possuem coletores específicos para óleo de cozinha.</li>
+          </ol>
+          <p><b>Nota: </b>Óleo de motor (automotivo) é diferente. Ele é altamente tóxico e deve ser devolvido no posto de gasolina ou na oficina mecânica onde foi feita a troca.</p>
+        </li>
+        <li>
+          <h4>Medicamentos (Vencidos ou em Desuso)</h4>
+          <p>Por que o cuidado?</p>
+          <ul>
+            <li>Contaminação da Água: Jamais jogue remédios no vaso sanitário ou na pia. Os componentes químicos não são filtrados pelas estações de tratamento de esgoto e contaminam rios e a água que bebemos.</li>
+            <li>Saúde Pública: Se jogados no lixo comum, podem ser ingeridos por animais ou até mesmo por pessoas, causando intoxicações graves.</li>
+            <li>Superbactérias: O descarte de antibióticos na natureza pode contribuir para a resistência bacteriana.</li>
+          </ul>
+          <p>Como descartar corretamente?</p>
+          <ol>
+            <li>Separe os medicamentos vencidos ou que você não usa mais (comprimidos, xaropes, pomadas), incluindo as cartelas e frascos.</li>
+            <li>Leve-os até um ponto de coleta em farmácias ou postos de saúde. Grandes redes de farmácia são obrigadas por lei (Logística Reversa) a ter coletores visíveis para esses itens.</li>
+            <li>Caixas e bulas (papel) podem ser recicladas normalmente.</li>
+          </ol>
+        </li>
+        <li>
+          <h4>Pilhas e Baterias</h4>
+          <p>Por que o cuidado?</p>
+          <ul><li>Assim como os eletrônicos, elas contêm metais pesados (chumbo, mercúrio, cádmio) que são extremamente tóxicos e vazam no solo e na água se descartados em aterros.</li></ul>
+          <p>Como descartar corretamente?</p>
+          <ol>
+            <li>Acumule as pilhas e baterias usadas em um recipiente separado.</li>
+            <li>Leve-as aos coletores específicos, conhecidos como "Papa-Pilhas".</li>
+            <li>Onde encontrar: Supermercados, agências bancárias, lojas de eletrônicos e, às vezes, prédios públicos.</li>
+          </ol>
+        </li>
+        <li>
+          <h4>Lâmpadas</h4>
+          <p>O descarte muda de acordo com o tipo de lâmpada</p>
+          <ul>
+            <li>
+              <h5>Lâmpadas Fluorescentes (as brancas, tubulares ou compactas):</h5>
+              <ul>
+                <li>Por que o cuidado? Contêm mercúrio (um metal pesado) em forma de gás. Se a lâmpada quebra, esse gás é liberado e é perigoso para a saúde e o meio ambiente.</li>
+                <li>Como descartar: Não quebre a lâmpada. Guarde-a com cuidado (se possível, na embalagem original) e leve a pontos de coleta em supermercados, lojas de material de construção ou Ecopontos. A loja que vende é, muitas vezes, obrigada a aceitar a lâmpada antiga de volta.</li>
+              </ul>
+            </li>
+            <li>
+              <h5>Lâmpadas de LED:</h5>
+              <ul><li>São consideradas lixo eletrônico. Devem ser descartadas nos mesmos coletores de eletrônicos.</li></ul>
+            </li>
+            <li>Lâmpadas Incandescentes (as antigas, amarelas):</li>
+            <ul><li>Estas não contêm materiais tóxicos. Podem ser descartadas no lixo comum (rejeito). Embale em jornal ou papelão para evitar que o vidro quebre e machuque os coletores.</li></ul>
+          </ul>
+        </li>
+        <li>
+          <h4>Móveis, Eletrodomésticos Grandes e Entulho</h4>
+          <p>Porque o cuidado?</p>
+          <ul>
+            <li>São resíduos volumosos. Abandoná-los em calçadas, terrenos ou rios é crime ambiental.</li>
+            <li>Eles obstruem a passagem, servem de abrigo para pragas (ratos, escorpiões) e entopem bueiros, causando enchentes.</li>
+          </ul>
+          <p>Como descartar corretamente:</p>
+          <ol>
+            <li>Ecopontos (PEV): A cidade possui ecopontos para descarte de móveis. Para mais informações verifique a seção sobre lixo eletrônico.</li>
+            <li>
+              <p>Cata-Treco: tem como objetivo recolher materiais inservíveis como móveis velhos, eletrodomésticos e outros objetos de grande porte, que não são coletados pelo serviço regular de lixo, para evitar o descarte irregular nas ruas.</p>
+              <b>Como funciona:</b>
+              <ul>
+                <li>Entre em contato com a Secretaria de Serviços Urbanos pelo telefone (33) 3536-5965</li>
+                <li>Informe o tipo e a quantidade de material a ser descartado.</li>
+                <li>No dia e horário combinados, deixe o material em frente à sua residência, em local de fácil acesso para a coleta.</li>
+              </ul>
+            </li>
+          </ol>
+        </li>
+        <li>
+          <h4>Pneus</h4>
+          <p>Por que o cuidado?</p>
+          <ul>
+            <li>Demoram centenas de anos para se decompor e são um dos principais locais de proliferação do mosquito Aedes aegypti, transmissor da dengue, zika e chikungunya.</li>
+          </ul>
+          <p>Como descartar corretamente?</p>
+          <ol>
+            <li>A forma mais fácil é deixar o pneu velho na borracharia ou loja no momento em que você compra um novo. Os fabricantes são obrigados por lei a dar a destinação correta (logística reversa).</li>
+            <li>Você também pode procurar Ecopontos da prefeitura que aceitem pneus.</li>
+          </ol>
+        </li>
+      </ol>
     </div>
   </div>
 </body>
