@@ -165,7 +165,14 @@ a {
     font-size: 18px;
   }
   #sidebar ul li a:hover { background-color: #05ec8c; display: block; }
-
+  body.menu-open::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5); /* escurece fundo */
+    z-index: 999;                /* abaixo do menu */
+  }
   .tab-bar {
     flex-direction: column;
     gap: 10px;
@@ -253,4 +260,5 @@ body.dark-mode a { color: #05ec8c; }
       .video-container { max-width: 100%; 
         padding-bottom: 56.25%
       }
+
     }
