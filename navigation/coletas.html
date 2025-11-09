@@ -9,6 +9,14 @@
   <link rel="shortcut icon" href="icon/favicon.ico" type="image/x-icon">
 </head>
 <body>
+  <script>// salva a prefenencia do modo claro ou escuro
+    (function() {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark') {
+        document.body.classList.add('dark-mode');
+      }
+    })();
+  </script>
   <header>
    <h1>BioTO</h1>
     <button class="menu-btn" onclick="toggleMenu()">☰</button>
