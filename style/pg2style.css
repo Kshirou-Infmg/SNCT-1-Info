@@ -98,6 +98,7 @@ main {
   border: 4px solid #056c4f;
   border-radius: 12px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  aspect-ratio: 1 / 1;
   transition: border-color 0.3s ease, background-color 0.3s ease;
    margin: auto;
   display: block;
@@ -212,6 +213,7 @@ body.dark-mode .leaflet-popup-content-wrapper {
 body.dark-mode .leaflet-popup-tip {
   background: #0d1b2a;   /* azul escuro */
 }
+
 
 
 
