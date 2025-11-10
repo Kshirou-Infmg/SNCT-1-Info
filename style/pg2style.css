@@ -84,7 +84,7 @@ main {
 }
 
 .container {
-  display: flex;
+  display: block;
   flex-direction: column;      
   justify-content: center;     
   align-items: center;         
@@ -92,11 +92,12 @@ main {
 }
 
 .map-wrapper {
-  width: 100%;
-  max-width: 600px;
-  aspect-ratio: 1 / 1;
+  width: 60%;
+  height: 60%;
   margin: auto;
-  overflow: hidden; /* evita que o mapa ultrapasse */
+  overflow: scroll; /* evita que o mapa ultrapasse */
+  border-radius: 20px;
+  border: 5px solid #05ec8c;
 }
 
 #map {
@@ -106,7 +107,7 @@ main {
 }
 
 
-/* ===== Mobile===== */=
+/* ===== Mobile===== */
 @media (max-width: 600px) {
   header {
     flex-direction: column;
@@ -149,7 +150,7 @@ main {
     background: rgba(0,0,0,0.5); /* escurece fundo */
     z-index: 999;                /* abaixo do menu */
   }
-}
+
 
   #titulo-mapa {
     font-size: 22px;
@@ -216,11 +217,6 @@ body.dark-mode .leaflet-popup-tip {
   background: #0d1b2a;   /* azul escuro */
 }
 
-
-
-
-
-
-
-
-
+a{
+  color: #056c4f;
+}
