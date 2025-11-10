@@ -93,7 +93,7 @@ main {
 
 .map-wrapper {
   width: 60%;
-  height: 60%;
+  height: 100%;
   margin: auto;
   overflow: auto;
   border-radius: 20px;
@@ -144,7 +144,7 @@ main {
 /* fallback de dimensão para o map-wrapper e #map */
 .map-wrapper {
   width: 60%;
-  height: 60%;
+  height: 100%;
   margin: auto;
   overflow: auto;
 }
