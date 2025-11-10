@@ -41,41 +41,9 @@
       <p style="font-size:14px; margin-bottom: 10px;">Teófilo Otoni - MG</p>
 
       <!-- Mapa Leaflet -->
-      <div id="map"></div>
-      <script>function toggleMenu() {
-  const sidebar = document.getElementById("sidebar");
-  const isActive = sidebar.classList.toggle("active");
-
-  // adiciona overlay no mobile
-  if (isActive) {
-    document.body.classList.add("menu-open");
-  } else {
-    document.body.classList.remove("menu-open");
-  }
-}
-
-function openTab(tabId) {
-  const tabs = document.querySelectorAll('.tab-content');
-  tabs.forEach(tab => tab.style.display = 'none');
-  document.getElementById(tabId).style.display = 'block';
-}
-
-function toggleDarkMode() {
-  const isDark = document.body.classList.toggle("dark-mode");
-  localStorage.setItem("theme", isDark ? "dark" : "light");
-
-  // se o mapa já existe, alterna a camada na hora
-  if (typeof map !== "undefined") {
-    if (isDark) {
-      map.removeLayer(mapaClaro);
-      map.addLayer(mapaEscuro);
-    } else {
-      map.removeLayer(mapaEscuro);
-      map.addLayer(mapaClaro);
-    }
-  }
-}</script>
-    </div>
+      <div class="map-wrapper">
+        <div id="map"></div>
+      </div>
 
     <div class="texto-centralizado">
       <h3>Outros</h3>
@@ -142,6 +110,6 @@ function toggleDarkMode() {
   <script src="../script/scriptmenu.js"></script>
 
   <!-- Script do mapa -->
-  <!--script src="../script/mapa.js"></script-->
+  <script src="../script/mapa.js"></script>
 </body>
 </html>
