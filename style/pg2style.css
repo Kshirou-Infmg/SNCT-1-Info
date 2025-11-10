@@ -95,7 +95,7 @@ main {
   width: 60%;
   height: 60%;
   margin: auto;
-  overflow: scroll;
+  overflow: auto;
   border-radius: 20px;
   border: 5px solid #05ec8c;
 }
@@ -146,7 +146,7 @@ main {
   width: 60%;
   height: 60%;
   margin: auto;
-  overflow: scroll;
+  overflow: auto;
 }
 #map {
   width: 100%;
