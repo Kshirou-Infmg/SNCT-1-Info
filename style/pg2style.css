@@ -107,7 +107,7 @@ main {
 }
 
 
-/* ===== Mobile===== */
+/* ===== Mobile===== 8*//*
 @media (max-width: 600px) {
   header { flex-direction: column; align-items: center; padding: 15px; }
   header h1 { font-size: 28px; text-align: center; }
@@ -140,7 +140,8 @@ main {
   #titulo-mapa { font-size: 22px; }
   main { padding: 20px 10px; }
 }
-
+  não incosta
+*/ 
 /* fallback de dimensão para o map-wrapper e #map */
 .map-wrapper {
   width: 60%;
