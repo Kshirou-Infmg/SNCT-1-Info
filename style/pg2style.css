@@ -208,11 +208,6 @@ body.dark-mode .leaflet-popup-tip {
   background: #0d1b2a;   /* azul escuro */
 }
 
-
-
-
-
-
-
-
-
+a{
+  color: #056c4f;
+}
