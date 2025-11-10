@@ -17,17 +17,17 @@ function openTab(tabId) {
 }
 
 function toggleDarkMode() {
-  const isDark = document.body.classList.toggle("dark-mode");
-  localStorage.setItem("theme", isDark ? "dark" : "light");
+  const isDark = document.body.classList.toggle('dark-mode');
+  localStorage.setItem('theme', isDark ? 'dark' : 'light');
 
-  // se o mapa já existe, alterna a camada na hora
-  if (typeof map !== "undefined") {
-    if (isDark) {
-      map.removeLayer(mapaClaro);
-      map.addLayer(mapaEscuro);
-    } else {
-      map.removeLayer(mapaEscuro);
-      map.addLayer(mapaClaro);
-    }
+  if (!window._myMap || !window._mapaClaro || !window._mapaEscuro) return;
+
+  if (isDark) {
+    if (window._myMap.hasLayer(window._mapaClaro)) window._myMap.removeLayer(window._mapaClaro);
+    if (!window._myMap.hasLayer(window._mapaEscuro)) window._mapaEscuro.addTo(window._myMap);
+  } else {
+    if (window._myMap.hasLayer(window._mapaEscuro)) window._myMap.removeLayer(window._mapaEscuro);
+    if (!window._myMap.hasLayer(window._mapaClaro)) window._mapaClaro.addTo(window._myMap);
   }
+  setTimeout(function () { window._myMap.invalidateSize(); }, 150);
 }

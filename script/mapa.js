@@ -1,26 +1,28 @@
-//Inicialização do mapa
-var map = L.map('map').setView([-17.857, -41.508], 14);
+document.addEventListener('DOMContentLoaded', function () {
+  // cria o mapa
+  var map = L.map('map', { zoomControl: true }).setView([-17.857, -41.508], 14);
 
-//Camada clara
-var mapaClaro = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution: '© OpenStreetMap'
-});
+  // camadas
+  var mapaClaro = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap'
+  });
 
-//Camada escura
-var mapaEscuro = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-  attribution: '© OpenStreetMap © Carto',
-  subdomains: 'abcd',
-  maxZoom: 20
-});
+  var mapaEscuro = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+    attribution: '© OpenStreetMap © Carto',
+    subdomains: 'abcd',
+    maxZoom: 20
+  });
 
-//Aplica tema salvo
-const savedTheme = localStorage.getItem("theme");
-if (savedTheme === "dark") {
-  mapaEscuro.addTo(map);
-} else {
-  mapaClaro.addTo(map);
-}
+  // aplica tema salvo
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark") {
+    mapaEscuro.addTo(map);
+  } else {
+    mapaClaro.addTo(map);
+  }
 
+  // adiciona marcadores (copie todos seus L.marker aqui)
+ 
 //Marcadores dos pontos de coleta
 L.marker([-17.892662984832256, -41.523976461703825]).addTo(map)
   .bindPopup('<b>Reciclagem Campos</b><br>Av. Alfredo Sá, 2597, Jardim das Acácias. Centro de reciclagem. Abre segunda às 07:30.');
@@ -48,3 +50,13 @@ L.marker([-17.860500, -41.501700]).addTo(map)
 
 L.marker([-17.850000, -41.510000]).addTo(map)
   .bindPopup('<b>TERRA & ENTULHO LTDA</b><br>Rua Projetada, bairro São Cristóvão. Coleta de resíduos não perigosos e locação de equipamentos.');
+  // quando o mapa estiver pronto, força recalculo após curto delay
+  map.whenReady(function () {
+    setTimeout(function () { map.invalidateSize(); }, 150);
+  });
+
+  // expõe para outras partes do código
+  window._myMap = map;
+  window._mapaClaro = mapaClaro;
+  window._mapaEscuro = mapaEscuro;
+});
